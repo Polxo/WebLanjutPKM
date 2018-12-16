@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Culture Of Indonesia</title>
-
+	<title>Culture of Indonesia</title>
 	<!--Bostrap-->
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" type="text/css" href="boostrap/css/bootstrap.min.css">
-  	<script src="boostrap\js\bootstrap.min.js"></script>
-
-  	<!-- css -->
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	
-
-  	
-  	 <!-- Start WOWSlider.com HEAD section -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  	<!--end bostrap-->
+   	<!-- Start WOWSlider.com HEAD section -->
 		<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 		<script type="text/javascript" src="engine1/jquery.js"></script>
 	<!-- End WOWSlider.com HEAD section -->
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--end css-->	
 </head>
 <body class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<header>
-				<!--menu-->
+				<!-- menu -->
 				<div class="menu">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light ">
 					  <a class="navbar-brand" href="#">Culture Of indonesia</a>
@@ -35,22 +34,17 @@
 						   	   	<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
 						      	<a class="nav-item nav-link" href="#">Pariwisata</a>
-						      	<a class="nav-item nav-link" href="#">Login</a>
-					     	 	
+						      	<a class="nav-item nav-link" href="#">Login</a>	
 					    	</div>
 					  	</div>
 					</nav>
 				</div>
+				<!--end menu-->
 			</header>
 			<content>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="informasi">
-								<img src="img/Coba.jpg">
-							</div>
-							<!-- Start WOWSlider.com BODY section -->
-							<div id="wowslider-container1">
+				<!--slider-->
+				<div class="slider">
+					<div id="wowslider-container1">
 								<div class="ws_images">
 									<ul>
 										<li><a href="http://wowslider.net" target="_self"><img src="data1/images/1.jpg" alt="javascript slider" title="1" id="wows1_0"/></a></li>
@@ -72,9 +66,9 @@
 							<script type="text/javascript" src="engine1/wowslider.js"></script>
 							<script type="text/javascript" src="engine1/script.js"></script>
 							<!-- End WOWSlider.com BODY section -->
-						</div>
-					</div>			
+
 				</div>
+				<!--slider end-->
 			</content>
 			<footer class="page-footer font-small blue pt-4 ">
 
@@ -124,6 +118,10 @@
 
 </footer>
 		</div>
+		
 	</div>
+
+
+
 </body>
 </html>
