@@ -21,6 +21,9 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
   	<!-- angular end--> 
+  	<!--font awesom-->
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/solid.css">
+  	<!--end font awesom-->
 
 </head>
 <body class="container-fluid">
@@ -47,7 +50,7 @@
 				<!--end menu-->
 			</header>
 			<content>
-							<!--slogan-->
+				<!--slogan-->
 				<div class="slogan">
 					<div class="pslogan">
 						<span class="border">

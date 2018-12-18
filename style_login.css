@@ -3,7 +3,7 @@
 .body
 {
 	font-family: 'Roboto', san-serif;
-	background: url(img/img/mountain.png) no-repeat center center fixed;
+	background: url(../img/img/mountain.png) no-repeat center center fixed;
 	background-size: cover;
 }
 .main-section
@@ -21,8 +21,8 @@
 }
 .user-img img
 {
-	height: 120px;
-	width: 120px;
+	height: 80px;
+	width: 80px;
 }
 .user-img
 {
