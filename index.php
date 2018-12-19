@@ -33,71 +33,44 @@
 				<!-- menu -->
 				<div class="menu">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-					  <a class="navbar-brand" href="#">Culture Of indonesia</a>
+					  <a class="navbar-brand" href="#!">Culture Of indonesia</a>
 					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 	aria-expanded="false" aria-label="Toggle navigation">
 					  	<span class="navbar-toggler-icon"></span>
 					  </button>
 					  	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						    <div class="navbar-nav">
-						   	   	<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+						   	   	<a class="nav-item nav-link active" href="#!">Home <span class="sr-only">(current)</span></a>
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
 						      	<a class="nav-item nav-link" href="#">Pariwisata</a>
-						      	<a class="nav-item nav-link" href="#">Login</a>	
+						      	<a class="nav-item nav-link" href="#!login">Login</a>
+						      	<a class="nav-item nav-link" href="#!daftar">Daftar</a>		
 					    	</div>
 					  	</div>
 					</nav>
 				</div>
 				<!--end menu-->
 			</header>
-			<content>
-			<!--slogan-->
-				<div class="slogan">
-					<div class="pslogan">
-						<span class="border">
-							Culture Of Indonesia
-						</span>
-					</div>
-				</div>
-				<!--end slogan-->
-				<!--video-->
-					<div class="video">
-						<iframe width="100%" height="500"  src="https://www.youtube.com/embed/O4yc069cPiw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						
-					</div>
-				<!--end video-->
-				<!--deskripsi-->
-				<div class="deskripsi">
-					<h1>About Us</h1>
-					<p>Culture of indonesia is website for foreigners of locals to know the culture include ancient building, theater, language, etc, also tourism spot in the regions in Indonesia</p>
+			<content ng-app="myApp">
+				<div ng-view></div>
 
-				</div>
-				<!--deskripsi end-->
-			<!--slider-->
-				<div class="slider">
-					<div id="wowslider-container1">
-								<div class="ws_images">
-									<ul>
-										<li><a href="http://wowslider.net" target="_self"><img src="data1/images/1.jpg" alt="javascript slider" title="1" id="wows1_0"/></a></li>
-										<li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_1"/></li>
-									</ul>
-								</div>
-								<div class="ws_bullets">
-									<div>
-										<a href="#" title="1"><span><img src="data1/tooltips/1.jpg" alt="1"/>1</span></a>
-										<a href="#" title="2"><span><img src="data1/tooltips/2.jpg" alt="2"/>2</span></a>
-									</div>
-								</div>
-								<div class="ws_script" style="position:absolute;left:-99%">
-									<a href="http://wowslider.net">bootstrap carousel</a>by WOWSlider.com v8.8
-								</div>
-								<div class="ws_shadow">
-								</div>
-							</div>	
-							<script type="text/javascript" src="engine1/wowslider.js"></script>
-							<script type="text/javascript" src="engine1/script.js"></script>
-							<!-- End WOWSlider.com BODY section -->
-				</div>
-				<!--slider end-->
+				  	<script>
+						var app = angular.module("myApp", ["ngRoute"]);
+						app.config(function($routeProvider) {
+						    $routeProvider
+						    .when("/", {
+						        templateUrl : "main.htm"
+						    })
+						    .when("/login", {
+						        templateUrl : "login.htm"
+						    })
+						    .when("/daftar", {
+						        templateUrl : "daftar.htm"
+						    })
+						    .when("/blue", {
+						        templateUrl : "blue.htm"
+						    });
+						});
+					</script>
 			</content>
 			<footer class="page-footer font-small blue pt-4 ">
 

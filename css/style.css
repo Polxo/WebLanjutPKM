@@ -40,7 +40,8 @@ content .deskripsi{
 content .daftar{
 	font-family: 'Roboto', sans-serif;
 	background-image: url(../img/mountain.jpg);
-	background-size: cover;
+
+	height: 700px;
 }
 content .daftar .main-section {
 	margin: 0 auto;
@@ -95,7 +96,7 @@ content .daftar .Login a{
 content .login{
 	font-family: 'Roboto', sans-serif;
 	background-image: url(../img/mountain.jpg);
-	background-size: cover;
+	height: 500px;
 }
 content .login .main-section {
 	margin: 0 auto;
