@@ -50,7 +50,7 @@
 				<!--end menu-->
 			</header>
 			<content>
-				<!--slogan-->
+			<!--slogan-->
 				<div class="slogan">
 					<div class="pslogan">
 						<span class="border">
