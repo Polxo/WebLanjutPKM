@@ -54,7 +54,7 @@
 				<div class="slogan">
 					<div class="pslogan">
 						<span class="border">
-							dfsadsadsadushaduhsahdoisahdiosahdihdoi
+							Culture Of Indonesia
 						</span>
 					</div>
 				</div>
@@ -67,8 +67,8 @@
 				<!--end video-->
 				<!--deskripsi-->
 				<div class="deskripsi">
-					<h1>sadasdasdasdasdasd</h1>
-					<p>sadsadsadsadasdsa</p>
+					<h1>About Us</h1>
+					<p>Culture of indonesia is website for foreigners of locals to know the culture include ancient building, theater, language, etc, also tourism spot in the regions in Indonesia</p>
 
 				</div>
 				<!--deskripsi end-->
