@@ -1,3 +1,10 @@
+<?php
+require_once('kon.php');
+session_start();
+if(!isset($_SESSION['user'])){
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,7 @@
   	<!--end font awesom-->
 
 </head>
-<body class="container-fluid">
+<body class="container-fluid" style="padding: 0px;">
 	<div class="row">
 		<div class="col-md-12">
 			<header>
@@ -43,7 +50,8 @@
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
 						      	<a class="nav-item nav-link" href="#">Pariwisata</a>
 						      	<a class="nav-item nav-link" href="#!login">Login</a>
-						      	<a class="nav-item nav-link" href="#!daftar">Daftar</a>		
+
+						      
 					    	</div>
 					  	</div>
 					</nav>
@@ -60,15 +68,16 @@
 						    .when("/", {
 						        templateUrl : "main.htm"
 						    })
+						    .when("/pariwisata", {
+						        templateUrl : "pariwisata.htm"
+						    })
 						    .when("/login", {
 						        templateUrl : "login.htm"
 						    })
 						    .when("/daftar", {
 						        templateUrl : "daftar.htm"
-						    })
-						    .when("/blue", {
-						        templateUrl : "blue.htm"
 						    });
+						    						    
 						});
 					</script>
 			</content>
@@ -126,3 +135,12 @@
 
 </body>
 </html>
+
+<?php
+} else {
+	header('location:index_log.php');
+}
+?>
+
+	
+

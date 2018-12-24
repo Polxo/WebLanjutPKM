@@ -11,7 +11,7 @@ if(isset($_SESSION['user'] )){
 <form action="cr_adm.php" method="POST">
 <input type="submit" name="submit" value="create"> <br>	
 </form>
-
+<a href="logout.php" class="nav-item nav-link" style="border: solid 1px;">Logout</a>
 <TABLE >	
 
 <?php
@@ -57,7 +57,7 @@ while ($rec = mysqli_fetch_array($query)) {
 </body>
 <?php
 } else {
-header('location: login.php');
+header('location: /index.php#!login');
 }
 ?>
 

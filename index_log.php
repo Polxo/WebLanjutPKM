@@ -1,3 +1,15 @@
+<?php
+require_once('kon.php');
+session_start();
+if(isset($_SESSION['user'])){
+	if($_SESSION['user'] == "admin"){
+		header('location: adm/admin.php');
+	}else{
+$u = $_SESSION['user'];
+$query = mysqli_query($con, "SELECT * FROM login where user = '$u'");
+$record = mysqli_fetch_array($query)
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,9 +54,11 @@
 						   	   	<a class="nav-item nav-link active" href="#!">Home <span class="sr-only">(current)</span></a>
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
 						      	<a class="nav-item nav-link" href="#">Pariwisata</a>
+						      	
 					    	</div>
 					    	<div class="navbar-nav">
-					    	<p>HI selamat datang ...</p>
+					    	<a class="nav-item nav-link">Hai! selamat datang, <?php echo $record['nama']; ?> </a>
+					    	<a href="logout.php" class="nav-item nav-link" style="border: solid 1px;">Logout</a>
 					    	</div>
 					  	</div>
 					</nav>
@@ -61,14 +75,8 @@
 						    .when("/", {
 						        templateUrl : "main.htm"
 						    })
-						    .when("/login", {
-						        templateUrl : "login.htm"
-						    })
-						    .when("/daftar", {
-						        templateUrl : "daftar.htm"
-						    })
-						    .when("/blue", {
-						        templateUrl : "blue.htm"
+						    .when("/pariwisata", {
+						        templateUrl : "pariwisata.htm"
 						    });
 						});
 					</script>
@@ -127,3 +135,10 @@
 
 </body>
 </html>
+
+<?php
+}
+} else {
+header('location: index.php#!login');
+}
+?>
