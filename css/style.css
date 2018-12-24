@@ -21,8 +21,28 @@ content .slogan .pslogan{
 	top: 50%;
 	width: 100%;
 	text-align:center;
-	color: #000;
-	font-size: 58px;
+	color: #fff;
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+content .judul {
+	background-image: url('../img/pariwisata.jpg');
+	min-height: 500px;
+	position: relative;
+	opacity: 0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+}
+content .judul .pjudul{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align:center;
+	color: white;
+	font-size: 100px;
 	letter-spacing: 8px;
 	text-transform: uppercase;
 }
