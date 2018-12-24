@@ -48,7 +48,7 @@ if(!isset($_SESSION['user'])){
 						    <div class="navbar-nav">
 						   	   	<a class="nav-item nav-link active" href="#!">Home <span class="sr-only">(current)</span></a>
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
-						      	<a class="nav-item nav-link" href="#">Pariwisata</a>
+						      	<a class="nav-item nav-link" href="#!pariwisata">Pariwisata</a>
 						      	<a class="nav-item nav-link" href="#!login">Login</a>
 
 						      
