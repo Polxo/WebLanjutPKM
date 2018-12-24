@@ -1,7 +1,7 @@
 <?php
 require_once('kon.php');
 session_start();
-if(!isset($_SESSION['user'])){
+if(isset($_SESSION['user'])){
 
 ?>
 
@@ -50,7 +50,7 @@ while ($rec = mysqli_fetch_array($query)) {
 </body>
 <?php
 } else {
-	header('location:index_log.php');
+	header('location:login.php');
 }
 ?>
 

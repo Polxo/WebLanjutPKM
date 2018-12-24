@@ -1,3 +1,8 @@
+<?php
+require_once('kon.php');
+session_start();
+if(!isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,3 +17,8 @@
 
 </body>
 </html>
+<?php
+} else {
+	header('location:index_log.php');
+}
+?>

@@ -1,5 +1,8 @@
 <?php
 require_once('kon.php');
+session_start();
+if(!isset($_SESSION['user'])){
+
 ?>
 
 <body>
@@ -16,6 +19,11 @@ require_once('kon.php');
 
 </body>
 
+<?php
+} else {
+	header('location:index_log.php');
+}
+?>
 
 	
 

@@ -1,3 +1,6 @@
+<?php
+require_once('kon.php');
+?>
 <!--startdaftar-->
 			<div class="daftar" >
 					<div class="modal-dialog text-center">
@@ -9,23 +12,25 @@
 								</div>
 								
 								<div class="col-12 form-input">
-									<form>
+										<form action="pros_daf.php" method="POST">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Enter Nama">
+											<input name="nama" type="text" class="form-control" placeholder="Enter Nama">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Enter Alamat">
+											<input name="alamat" type="text" class="form-control" placeholder="Enter Alamat">
 										</div>
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Enter Email">
+											<input name="mail" type="email" class="form-control" placeholder="Enter Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Enter User">
+											<input name="user" type="text" class="form-control" placeholder="Enter User">
 										</div>
 										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Enter Password">
+											<input name="pass" type="password" class="form-control" placeholder="Enter Password">
 										</div>
-										<button type="submint" class="btn btn-success">Daftar</button>
+								
+										<button name="submit" type="submit" class="btn btn-success">Daftar</button>
+
 									</form>
 								</div>
 								<div class="col-12 Login">
@@ -36,3 +41,5 @@
 					</div>
 				</div>
 <!-- end daftar-->
+
+
