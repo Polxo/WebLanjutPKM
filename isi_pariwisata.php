@@ -1,8 +1,13 @@
 <?php
 require_once('kon.php');
 session_start();
-if(!isset($_SESSION['user'])){
-
+if(isset($_SESSION['user'])){
+	if($_SESSION['user'] == "admin"){
+		header('location: adm/admin.php');
+	}else{
+$u = $_SESSION['user'];
+$query = mysqli_query($con, "SELECT * FROM login where user = '$u'");
+$record = mysqli_fetch_array($query)
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +27,7 @@ if(!isset($_SESSION['user'])){
 		<script type="text/javascript" src="engine1/jquery.js"></script>
 	<!-- End WOWSlider.com HEAD section -->
 	<!--css-->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_isi.css">
 	<!--end css-->
 	<!--angular-->
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -38,7 +43,6 @@ if(!isset($_SESSION['user'])){
 		<div class="col-md-12">
 			<header>
 				<!-- menu -->
-
 				<div class="menu">
 					<nav class="navbar navbar-expand-lg navbar-light bg-light ">
 					  <a class="navbar-brand" href="#!">Culture Of indonesia</a>
@@ -47,41 +51,57 @@ if(!isset($_SESSION['user'])){
 					  </button>
 					  	<div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
 						    <div class="navbar-nav">
-						   	   	<a class="nav-item nav-link active" href="#!">Home <span class="sr-only">(current)</span></a>
+						   	   	<a class="nav-item nav-link active" href="index.php#!">Home <span class="sr-only">(current)</span></a>
 						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
-						      	<a class="nav-item nav-link" href="#!pariwisata">Pariwisata</a>
+						      	<a class="nav-item nav-link" href="index.php#!pariwisata">Pariwisata</a>
 						      	
 					    	</div>
 					    	<div class="navbar-nav">
-					    	<a href="#!login" class="nav-item nav-link">Login</a>
+					    	<a class="nav-item nav-link">Hai! selamat datang, <?php echo $record['nama']; ?> </a>
+					    	<a href="logout.php" class="nav-item nav-link" style="border: solid 1px;">Logout</a>
 					    	</div>
 					  	</div>
 					</nav>
 				</div>
 				<!--end menu-->
 			</header>
-			<content ng-app="myApp">
-				<div ng-view></div>
-
-				  	<script>
-						var app = angular.module("myApp", ["ngRoute"]);
-						app.config(function($routeProvider) {
-						    $routeProvider
-						    .when("/", {
-						        templateUrl : "main.htm"
-						    })
-						    .when("/pariwisata", {
-						        templateUrl : "pariwisata.htm"
-						    })
-						    .when("/login", {
-						        templateUrl : "login.htm"
-						    })
-						    .when("/daftar", {
-						        templateUrl : "daftar.htm"
-						    });
-						    						    
-						});
-					</script>
+			<content >
+			<div id="isi">
+				<div class="isiposting">
+					<!--menampilkan gambar-->
+					<img src="img/jogja.jpg" class="gambardepan">
+					<h2>Pariwisata</h2>
+					<h3> Profile Singkat Candi prambanan</h3>
+					Candi Prambanan atau Candi Roro Jonggrang adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. ... Candi ini adalah termasuk Situs Warisan Dunia UNESCO, candi Hindu terbesar di Indonesia, sekaligus salah satu candi terindah di Asia Tenggara....<br>
+					<a href="#">
+					Baca selengkapnya >>>>>
+					</a>
+				</div>
+			</div>
+			<div id="isi">
+				<div class="isiposting">
+					<!--menampilkan gambar-->
+					<img src="img/jogja.jpg" class="gambardepan">
+					<h2>Pariwisata</h2>
+					<h3> Profile Singkat Candi prambanan</h3>
+					Candi Prambanan atau Candi Roro Jonggrang adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. ... Candi ini adalah termasuk Situs Warisan Dunia UNESCO, candi Hindu terbesar di Indonesia, sekaligus salah satu candi terindah di Asia Tenggara....<br>
+					<a href="#">
+					Baca selengkapnya >>>>>
+					</a>
+				</div>
+			</div>
+			<div id="isi">
+				<div class="isiposting">
+					<!--menampilkan gambar-->
+					<img src="img/jogja.jpg" class="gambardepan">
+					<h2>Pariwisata</h2>
+					<h3> Profile Singkat Candi prambanan</h3>
+					Candi Prambanan atau Candi Roro Jonggrang adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. ... Candi ini adalah termasuk Situs Warisan Dunia UNESCO, candi Hindu terbesar di Indonesia, sekaligus salah satu candi terindah di Asia Tenggara....<br>
+					<a href="#">
+					Baca selengkapnya >>>>>
+					</a>
+				</div>
+			</div>
 			</content>
 			<footer class="page-footer font-small blue pt-4 ">
 
@@ -133,18 +153,14 @@ if(!isset($_SESSION['user'])){
 		
 	</div>
 
-</footer>
-</div>
-</div>
+
 
 </body>
 </html>
 
 <?php
+}
 } else {
-	header('location:index_log.php');
+header('location: index.php#!login');
 }
 ?>
-
-	
-
