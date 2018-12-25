@@ -47,8 +47,6 @@ $record = mysqli_fetch_array($query)
 					  	<div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
 						    <div class="navbar-nav">
 						   	   	<a class="nav-item nav-link active" href="#!">Home <span class="sr-only">(current)</span></a>
-						      	<a class="nav-item nav-link" href="#">Kebudayaan</a>
-						      	<a class="nav-item nav-link" href="#!pariwisata">Pariwisata</a>
 						      	
 					    	</div>
 					    	<div class="navbar-nav">
@@ -157,6 +155,6 @@ while ($rec = mysqli_fetch_array($query)) {
 <?php
 
 } else {
-header('location: ../../index.php#!login');
+header('location: ../index.php#!login');
 }
 ?>
