@@ -124,7 +124,7 @@ if(!isset($_SESSION['user'])){
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/">Cluture Of Indonesia</a>
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/">Culture Of Indonesia</a>
   </div>
   <!-- Copyright -->
 
