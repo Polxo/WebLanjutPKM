@@ -1,0 +1,46 @@
+header
+{
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+}
+
+content #isi{
+	padding: 5px;
+	width : 100%;
+	height : auto;
+	background-color : white;
+	position : relative;
+	margin-top : 5px;
+}
+content #isi .isiposting{
+	background-color : #F8F9FA;
+	width : 100%;
+	height : auto;
+	margin-bottom : 5px;
+	padding : 5px;
+}
+content #isi .isiposting .gambardepan{
+	float : left;
+	height : 140px;
+	width : 150px;
+	margin-right : 5px;
+	margin-top : 3px;
+	padding : 1px;
+	border : 1px solid #dddddd;
+}
+content #isi .isiposting h2 {
+	font-size: 20px;
+	font-weight : bold;
+	color : #000;
+	margin-top : 4px;
+	margin-bottom : 3px;
+}
+content #isi .isiposting a{
+	text-decoration : none;
+}
+content #isi .isiposting a:hover{
+	color : yellow;
+}
+
+
