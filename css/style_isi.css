@@ -15,8 +15,8 @@ content #isi{
 }
 content #isi .isiposting{
 	background-color : #F8F9FA;
-	width : 99%;
-	height : 200px;
+	width : 100%;
+	height : auto;
 	margin-bottom : 5px;
 	padding : 5px;
 }

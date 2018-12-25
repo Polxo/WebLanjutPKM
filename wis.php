@@ -78,79 +78,56 @@ $record = mysqli_fetch_array($query)
 				<div class="isiposting">
 					
 					<?php
-require_once('kon.php');
-$id = $_GET['id_wis'];
-$q = mysqli_query($con, "SELECT * FROM wisata where id_wis = '$id'");
-while ($rec = mysqli_fetch_array($q)) {
-?>
+						require_once('kon.php');
+						$id = $_GET['id_wis'];
+						$q = mysqli_query($con, "SELECT * FROM wisata where id_wis = '$id'");
+						while ($rec = mysqli_fetch_array($q)) {
+					?>
 
-	<TABLE border="0">	
-	<tr align="center">
+					<TABLE border="0">	
+						<tr align="center">
 
-		<input type="hidden" name="id_wis" value="<?php echo $_GET['id_wis']?>"> 
-		<td colspan="4"><?php echo $rec['nm_wis']; ?></td>
-		
-	</tr>
-	<tr>
-		<td>Koordinat</td>
-		<td>:</td>
-		<td><?php echo $rec['kordinat']; ?></td>
-		<td rowspan="3" ><?php 
-					if ($rec['id_wis'] == '13') {
+							<input type="hidden" name="id_wis" value="<?php echo $_GET['id_wis']?>"> 
+							<td colspan="4"><?php echo $rec['nm_wis']; ?></td>
+							
+						</tr>
+						<tr>
+							<td>Koordinat</td>
+							<td>:</td>
+							<td><?php echo $rec['kordinat']; ?></td>
+							<td rowspan="3" ><?php 
+										if ($rec['id_wis'] == '13') {
+											?>
+											<img src="img/taman.jpg" class="gambardepan">
+										<?php }
+										else if ($rec['id_wis'] == '14') {
+										 ?>
+										 <img src="img/air.jpg" class="gambardepan">
+										 <?php } ?></td>
+						</tr>
+							<tr>
+							<td>Lokasi</td>
+							<td>:</td>
+							<td><?php echo $rec['lokasi']; ?></td>
+							</tr>
+
+						<tr>
+							<td>Jenis Wisata</td>
+							<td>:</td>
+							<td><?php echo $rec['jenis_wis']; ?></td>
+						</tr>
+
+						<tr>
+							<td>Deskripsi</td>
+							<td>:</td>
+							<td colspan="1"><?php echo $rec['penjelasan']; ?></td>
+						</tr>
+						<?php
+							}
 						?>
-						<img src="img/taman.jpg" class="gambardepan">
-					<?php }
-					else if ($rec['id_wis'] == '14') {
-					 ?>
-					 <img src="img/air.jpg" class="gambardepan">
-					 <?php } ?></td>
-	</tr>
-		<tr>
-		<td>Lokasi</td>
-		<td>:</td>
-		<td><?php echo $rec['lokasi']; ?></td>
-		</tr>
-
-		<tr>
-		<td>Jenis Wisata</td>
-		<td>:</td>
-		<td><?php echo $rec['jenis_wis']; ?></td>
-		</tr>
-
-		<tr>
-		<td>Deskripsi</td>
-		<td>:</td>
-		<td colspan="1"><?php echo $rec['penjelasan']; ?></td>
-		</tr>
-
-	
-
-<?php
-}
-?>
-</TABLE>
-	
+					</TABLE>
 				</div>
 			</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
 			</content>
 			<footer class="page-footer font-small blue pt-4 ">
 
